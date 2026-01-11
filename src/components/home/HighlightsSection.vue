@@ -36,9 +36,15 @@
 <style scoped>
 .section-head {
   text-align: center;
-  margin-bottom: 80px;
-  padding: 40px 20px;
+  margin-bottom: 48px;
+  padding: 20px 16px;
   position: relative;
+}
+@media (min-width: 780px) {
+  .section-head {
+    margin-bottom: 80px;
+    padding: 40px 20px;
+  }
 }
 .section-head h2 {
   font-size: var(--h2-size);
@@ -75,19 +81,21 @@
 .cards {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 28px;
+  gap: 16px;
   width: 100%;
-  padding: 0 20px;
+  padding: 0 16px;
   margin: 0 auto;
 }
 @media (min-width: 780px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    padding: 0 20px;
   }
 }
 .card-item {
-  padding: 40px;
-  border-radius: 20px;
+  padding: 24px 20px;
+  border-radius: 16px;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.95) 100%);
   border: 1px solid rgba(255, 204, 24, 0.2);
   box-shadow:
@@ -97,6 +105,12 @@
   transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+}
+@media (min-width: 780px) {
+  .card-item {
+    padding: 40px;
+    border-radius: 20px;
+  }
 }
 .card-item::before {
   content: '';

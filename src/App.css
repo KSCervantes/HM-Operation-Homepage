@@ -1,8 +1,14 @@
 /* Rely on global subtle contrast; no overrides here */
 .footer-columns {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .footer-columns {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
 }
 
 .footer-bottom {
@@ -45,15 +51,16 @@
 .btn-primary-3d {
   cursor: pointer;
   transition: all 200ms ease;
-  padding: 14px 40px;
+  padding: clamp(10px, 2vw, 14px) clamp(24px, 4vw, 40px);
   border-radius: 10px;
   font-weight: 600;
   border: none;
-  font-size: 16px;
+  font-size: clamp(13px, 2vw, 16px);
   background: #ffcc18;
   color: #000000;
   border-bottom: 4px solid #d97706;
   display: inline-block;
+  white-space: nowrap;
 }
 
 .btn-primary-3d:hover {
@@ -66,12 +73,6 @@
   border-bottom-width: 2px;
   filter: brightness(0.9);
   transform: translateY(2px);
-}
-
-@media (max-width: 768px) {
-  .footer-columns {
-    grid-template-columns: 1fr;
-  }
 }
 
 .mobile-menu {

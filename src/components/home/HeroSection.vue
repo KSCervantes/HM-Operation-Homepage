@@ -33,7 +33,12 @@
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 80px 0 48px;
+  padding: 48px 0 32px;
+}
+@media (min-width: 900px) {
+  .hero {
+    padding: 80px 0 48px;
+  }
 }
 .hero-bg {
   position: absolute;
@@ -44,14 +49,18 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 32px;
-  padding: 0 24px;
+  grid-auto-flow: dense;
+  gap: 16px;
+  padding: 0 12px;
   margin: 0 auto;
   max-width: 1400px;
 }
 @media (min-width: 900px) {
   .hero-content {
     grid-template-columns: 1.15fr 0.85fr;
+    grid-auto-flow: row;
+    gap: 32px;
+    padding: 0 24px;
   }
 }
 .hero-text h1 {
@@ -159,11 +168,12 @@
 .btn {
   cursor: pointer;
   transition: all 200ms ease;
-  padding: 12px 24px;
+  padding: clamp(10px, 2vw, 12px) clamp(16px, 4vw, 24px);
   border-radius: 10px;
   font-weight: 600;
   border: none;
-  font-size: 16px;
+  font-size: clamp(14px, 2.5vw, 16px);
+  white-space: nowrap;
 }
 
 .btn-primary {
@@ -201,15 +211,18 @@
 }
 .hero-visual {
   position: relative;
-  min-height: 400px;
+  min-height: 240px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 12px 0;
+  order: -1;
 }
 @media (min-width: 900px) {
   .hero-visual {
     min-height: 480px;
+    padding: 20px;
+    order: 2;
   }
 }
 .image-stack {
@@ -223,13 +236,13 @@
 }
 .hero-img {
   position: absolute;
-  width: 300px;
-  height: 320px;
+  width: clamp(120px, 35vw, 300px);
+  height: clamp(130px, 37vw, 320px);
   object-fit: cover;
   border-radius: var(--radius-lg);
-  box-shadow: 0 25px 50px rgba(16, 24, 40, 0.25);
+  box-shadow: 0 12px 28px rgba(16, 24, 40, 0.3);
   transition: transform 300ms ease;
-  border: 4px solid #fff;
+  border: 3px solid #fff;
 }
 @media (min-width: 900px) {
   .hero-img {
@@ -238,8 +251,8 @@
   }
 }
 .hero-img-1 {
-  top: -30px;
-  right: 20px;
+  top: 0;
+  right: 5px;
   transform: rotate(8deg);
   z-index: 2;
   animation: float1 4s ease-in-out infinite;
@@ -247,15 +260,27 @@
 .hero-img-1:hover {
   transform: rotate(5deg) scale(1.03);
 }
+@media (min-width: 900px) {
+  .hero-img-1 {
+    top: -30px;
+    right: 20px;
+  }
+}
 .hero-img-2 {
-  bottom: 0px;
-  left: 10px;
+  bottom: 5px;
+  left: 5px;
   transform: rotate(-8deg);
   z-index: 1;
   animation: float2 4.5s ease-in-out infinite;
 }
 .hero-img-2:hover {
   transform: rotate(-5deg) scale(1.03);
+}
+@media (min-width: 900px) {
+  .hero-img-2 {
+    bottom: 0px;
+    left: 10px;
+  }
 }
 @keyframes float1 {
   0%,

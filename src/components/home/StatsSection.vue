@@ -24,19 +24,20 @@
 }
 .stats-wrap {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 12px;
 }
 @media (min-width: 780px) {
   .stats-wrap {
     grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
   }
 }
 .stat {
   background: transparent;
   border: none;
   border-radius: var(--radius-lg);
-  padding: 20px;
+  padding: clamp(12px, 3vw, 20px);
   text-align: center;
 }
 .value {

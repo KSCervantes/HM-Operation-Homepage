@@ -28,21 +28,38 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 120px;
-  padding: 0 24px;
+  height: 100px;
+  padding: 0 16px;
   max-width: none;
   margin: 0;
+}
+@media (min-width: 900px) {
+  .app-nav {
+    height: 120px;
+    padding: 0 24px;
+  }
 }
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   font-weight: var(--h4-weight);
   color: #ffffff;
+  flex: 1;
+  min-width: 0;
 }
 .brand-name {
   color: #ffcc18;
-  font-size:larger;
+  font-size: clamp(12px, 2.5vw, 18px);
+  line-height: 1.2;
+  max-width: 180px;
+  word-wrap: break-word;
+}
+@media (min-width: 900px) {
+  .brand-name {
+    max-width: 100%;
+    font-size: larger;
+  }
 }
 .brand-logo {
   width: 60px;
