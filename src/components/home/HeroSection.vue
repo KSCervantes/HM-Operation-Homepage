@@ -15,7 +15,7 @@
           from bookings, ordering, and student-centered experiences, all in one place.
         </p>
         <div class="hero-ctas">
-          <a href="#" class="btn btn-primary">Explore Foods</a>
+          <a href="http://localhost:3000/" class="btn btn-primary">Explore Foods</a>
           <a href="https://nemsu-hotel.netlify.app/" class="btn btn-outline">Book a Room</a>
         </div>
       </div>

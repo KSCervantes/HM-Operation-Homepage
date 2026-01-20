@@ -22,7 +22,7 @@ const closeNav = () => (navOpen.value = false)
         <a href="https://nemsu-hotel.netlify.app/" target="_blank" rel="noopener noreferrer"
           >Book Rooms</a
         >
-        <a href="#" class="btn btn-primary-3d" aria-label="Foods">Order Foods</a>
+        <a href="http://localhost:3000/" class="btn btn-primary-3d" aria-label="Foods">Order Foods</a>
       </nav>
       <button
         class="menu-toggle"
@@ -51,7 +51,7 @@ const closeNav = () => (navOpen.value = false)
         @click="closeNav"
         >Book Rooms</a
       >
-      <a href="#" class="btn btn-primary-3d" @click="closeNav">Order Foods</a>
+      <a href="http://localhost:3000/" class="btn btn-primary-3d" @click="closeNav">Order Foods</a>
     </div>
   </aside>
 

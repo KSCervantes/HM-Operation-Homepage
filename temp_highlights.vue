@@ -15,7 +15,7 @@
           gourmet spreads to customized menus, we bring culinary excellence to every event with
           fresh ingredients and exceptional service.
         </p>
-        <a href="#" class="link">Explore Foods</a>
+        <a href="http://localhost:3000/" class="link">Explore Foods</a>
       </article>
 
       <article class="card card-item">
