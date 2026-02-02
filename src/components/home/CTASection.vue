@@ -13,18 +13,22 @@
 
 <style scoped>
 .cta-section {
-  padding: 24px 0;
+  padding: 32px 0;
   text-align: center;
 }
 .container {
   display: inline-flex;
-  gap: 12px;
+  gap: 16px;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .btn {
-  padding: 10px 18px;
-  border-radius: 8px;
+  padding: 14px 24px;
+  min-height: 48px;
+  border-radius: 10px;
   font-weight: 700;
+  font-size: 18px;
 }
 .btn-primary {
   background: #ffcc18;

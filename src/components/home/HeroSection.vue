@@ -15,7 +15,7 @@
           from bookings, ordering, and student-centered experiences, all in one place.
         </p>
         <div class="hero-ctas">
-          <a href="http://localhost:3000/" class="btn btn-primary">Explore Foods</a>
+          <a href="https://nemsu-hm-hostel.vercel.app/" class="btn btn-primary">Explore Foods</a>
           <a href="https://nemsu-hotel.netlify.app/" class="btn btn-outline">Book a Room</a>
         </div>
       </div>
@@ -125,14 +125,14 @@
 .hero-text .built-local {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 14px;
+  gap: 10px;
+  font-size: 16px;
   font-weight: 700;
   color: #ffcc18;
-  margin-bottom: 20px;
-  padding: 8px 16px;
+  margin-bottom: 24px;
+  padding: 10px 20px;
   background: rgba(255, 204, 24, 0.15);
-  border: 1.5px solid rgba(255, 204, 24, 0.4);
+  border: 2px solid rgba(255, 204, 24, 0.5);
   border-radius: 50px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -147,16 +147,17 @@
   box-shadow: 0 8px 16px rgba(255, 204, 24, 0.2);
 }
 .hero-text p {
-  margin-top: 24px;
-  max-width: 640px;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: clamp(16px, 2vw, 18px);
-  line-height: 1.7;
+  margin-top: 28px;
+  max-width: 680px;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: clamp(18px, 2.2vw, 22px);
+  line-height: 1.8;
   font-weight: 500;
   animation: slideInUp 0.8s ease-out 0.4s backwards;
   position: relative;
   z-index: 1;
   text-align: justify;
+  letter-spacing: 0.02em;
 }
 .hero-ctas {
   margin-top: 24px;
@@ -168,11 +169,12 @@
 .btn {
   cursor: pointer;
   transition: all 200ms ease;
-  padding: clamp(10px, 2vw, 12px) clamp(16px, 4vw, 24px);
-  border-radius: 10px;
+  padding: clamp(12px, 2.5vw, 16px) clamp(20px, 4.5vw, 28px);
+  border-radius: 12px;
   font-weight: 600;
   border: none;
-  font-size: clamp(14px, 2.5vw, 16px);
+  font-size: clamp(16px, 2.8vw, 18px);
+  min-height: 48px;
   white-space: nowrap;
 }
 

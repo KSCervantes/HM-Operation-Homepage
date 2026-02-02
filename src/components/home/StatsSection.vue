@@ -10,7 +10,7 @@
         <div class="label">Food Menu</div>
       </div>
       <div class="stat">
-        <div class="value">4.8★</div>
+        <div class="value">5★</div>
         <div class="label">Avg. Satisfaction</div>
       </div>
     </div>
@@ -41,7 +41,7 @@
   text-align: center;
 }
 .value {
-  font-size: clamp(28px, 6vw, 48px);
+  font-size: clamp(32px, 7vw, 56px);
   font-weight: var(--h1-weight);
   color: var(--brand-dark);
   /* 3D extruded text effect using layered shadows */
@@ -53,9 +53,11 @@
     0 6px 10px rgba(16, 24, 40, 0.18);
 }
 .label {
-  margin-top: 6px;
-  color: var(--vt-c-text-light-2);
+  margin-top: 10px;
+  color: var(--vt-c-text-light-1);
   font-weight: var(--h4-weight);
+  font-size: 18px;
+  letter-spacing: 0.02em;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 </style>
