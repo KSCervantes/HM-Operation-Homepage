@@ -14,10 +14,7 @@
           NEMSU-Lianga Hospitality Management Opearations organize campus hospitality services —
           from bookings, ordering, and student-centered experiences, all in one place.
         </p>
-        <div class="hero-ctas">
-          <a href="https://nemsu-hm-hostel.vercel.app/" class="btn btn-primary">Explore Foods</a>
-          <a href="https://nemsu-hotel.netlify.app/" class="btn btn-outline">Book a Room</a>
-        </div>
+        <div class="hero-ctas"></div>
       </div>
       <div class="hero-visual">
         <div class="image-stack">
@@ -33,7 +30,17 @@
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 48px 0 32px;
+  padding: 32px 0 24px;
+}
+@media (min-width: 480px) {
+  .hero {
+    padding: 40px 0 32px;
+  }
+}
+@media (min-width: 768px) {
+  .hero {
+    padding: 60px 0 40px;
+  }
 }
 @media (min-width: 900px) {
   .hero {
@@ -50,10 +57,22 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-flow: dense;
-  gap: 16px;
-  padding: 0 12px;
+  gap: 20px;
+  padding: 0 16px;
   margin: 0 auto;
   max-width: 1400px;
+}
+@media (min-width: 480px) {
+  .hero-content {
+    padding: 0 20px;
+    gap: 24px;
+  }
+}
+@media (min-width: 768px) {
+  .hero-content {
+    padding: 0 24px;
+    gap: 28px;
+  }
 }
 @media (min-width: 900px) {
   .hero-content {
@@ -64,17 +83,27 @@
   }
 }
 .hero-text h1 {
-  font-size: var(--h1-size);
+  font-size: clamp(28px, 8vw, 72px);
   line-height: var(--h1-line-height);
   font-weight: var(--h1-weight);
   color: #ffffff;
   margin-bottom: 8px;
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 8px;
   align-items: flex-start;
   animation: slideInUp 0.8s ease-out 0.3s backwards;
   letter-spacing: var(--h1-letter-spacing);
+}
+@media (min-width: 480px) {
+  .hero-text h1 {
+    gap: 10px;
+  }
+}
+@media (min-width: 768px) {
+  .hero-text h1 {
+    gap: 12px;
+  }
 }
 .hero-text h1 .word {
   display: inline-block;
@@ -125,12 +154,12 @@
 .hero-text .built-local {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  font-size: 16px;
+  gap: 8px;
+  font-size: clamp(12px, 3vw, 16px);
   font-weight: 700;
   color: #ffcc18;
-  margin-bottom: 24px;
-  padding: 10px 20px;
+  margin-bottom: 16px;
+  padding: 8px 14px;
   background: rgba(255, 204, 24, 0.15);
   border: 2px solid rgba(255, 204, 24, 0.5);
   border-radius: 50px;
@@ -140,6 +169,21 @@
   transition: all 300ms ease;
   animation: slideInDown 0.6s ease-out 0.2s backwards;
 }
+@media (min-width: 480px) {
+  .hero-text .built-local {
+    font-size: 14px;
+    padding: 10px 18px;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .hero-text .built-local {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-bottom: 24px;
+  }
+}
 .hero-text .built-local:hover {
   background: rgba(255, 204, 24, 0.25);
   border-color: #ffcc18;
@@ -147,10 +191,24 @@
   box-shadow: 0 8px 16px rgba(255, 204, 24, 0.2);
 }
 .hero-text p {
-  margin-top: 28px;
+  margin-top: 20px;
   max-width: 680px;
   color: rgba(255, 255, 255, 0.95);
-  font-size: clamp(18px, 2.2vw, 22px);
+  font-size: clamp(15px, 4vw, 22px);
+}
+@media (min-width: 480px) {
+  .hero-text p {
+    margin-top: 24px;
+    font-size: clamp(16px, 3vw, 22px);
+  }
+}
+@media (min-width: 768px) {
+  .hero-text p {
+    margin-top: 28px;
+    font-size: clamp(18px, 2.2vw, 22px);
+  }
+}
+.hero-text p {
   line-height: 1.8;
   font-weight: 500;
   animation: slideInUp 0.8s ease-out 0.4s backwards;
@@ -213,12 +271,24 @@
 }
 .hero-visual {
   position: relative;
-  min-height: 240px;
+  min-height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 0;
+  padding: 8px 0;
   order: -1;
+}
+@media (min-width: 480px) {
+  .hero-visual {
+    min-height: 240px;
+    padding: 12px 0;
+  }
+}
+@media (min-width: 768px) {
+  .hero-visual {
+    min-height: 320px;
+    padding: 16px 0;
+  }
 }
 @media (min-width: 900px) {
   .hero-visual {
@@ -238,13 +308,27 @@
 }
 .hero-img {
   position: absolute;
-  width: clamp(120px, 35vw, 300px);
-  height: clamp(130px, 37vw, 320px);
+  width: clamp(100px, 32vw, 300px);
+  height: clamp(110px, 34vw, 320px);
   object-fit: cover;
   border-radius: var(--radius-lg);
-  box-shadow: 0 12px 28px rgba(16, 24, 40, 0.3);
+  box-shadow: 0 8px 20px rgba(16, 24, 40, 0.25);
   transition: transform 300ms ease;
-  border: 3px solid #fff;
+  border: 2px solid #fff;
+}
+@media (min-width: 480px) {
+  .hero-img {
+    width: clamp(120px, 35vw, 300px);
+    height: clamp(130px, 37vw, 320px);
+    border: 3px solid #fff;
+    box-shadow: 0 12px 28px rgba(16, 24, 40, 0.3);
+  }
+}
+@media (min-width: 768px) {
+  .hero-img {
+    width: clamp(180px, 30vw, 320px);
+    height: clamp(200px, 32vw, 340px);
+  }
 }
 @media (min-width: 900px) {
   .hero-img {

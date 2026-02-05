@@ -16,16 +16,23 @@ const closeNav = () => (navOpen.value = false)
       <div class="brand">
         <img src="/img/NEMSU_LOGOO.webp" alt="NEMSU logo" class="brand-logo" />
         <div>
-          <div class="brand-name">North Eastern Mindanao State University - Lianga Campus</div>
-          <small class="subtle">Hospitality Management Operation</small>
+          <div class="brand-name">North Eastern Mindanao State University</div>
+          <small class="subtle">Lianga Campus</small>
         </div>
       </div>
       <nav class="nav-links">
-        <RouterLink to="/" active-class="active">Home</RouterLink>
-        <a href="https://nemsu-hotel.netlify.app/" target="_blank" rel="noopener noreferrer"
+        <a
+          href="https://nemsu-hotel.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-primary-3d"
           >Book Rooms</a
         >
-        <a href="https://nemsu-hm-hostel.vercel.app/" class="btn btn-primary-3d" aria-label="Foods"
+        <a
+          href="https://nemsu-hm-hostel.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-primary-3d"
           >Order Foods</a
         >
       </nav>
@@ -48,15 +55,20 @@ const closeNav = () => (navOpen.value = false)
         <img src="/img/NEMSU_LOGOO.webp" alt="NEMSU logo" />
         <div class="brand-name">North Eastern Mindanao State University - Lianga Campus</div>
       </div>
-      <RouterLink to="/" active-class="active" @click="closeNav">Home</RouterLink>
       <a
         href="https://nemsu-hotel.netlify.app/"
         target="_blank"
         rel="noopener noreferrer"
         @click="closeNav"
+        class="btn-primary-3d"
         >Book Rooms</a
       >
-      <a href="https://nemsu-hm-hostel.vercel.app/" class="btn btn-primary-3d" @click="closeNav"
+      <a
+        href="https://nemsu-hm-hostel.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        @click="closeNav"
+        class="btn-primary-3d"
         >Order Foods</a
       >
     </div>
@@ -72,74 +84,88 @@ const closeNav = () => (navOpen.value = false)
         <img src="/img/NEMSU_LOGOO.webp" alt="NEMSU logo" />
         <div class="brand-meta">
           <p class="brand-description">
-            NEMSU-Lianga Hospitality Management<br />
-            Operation System streamlines campus<br />
-            hospitality services — bookings, facilities,<br />
-            catering, and student-centered experiences,<br />
-            all in one place.
+            NEMSU-Lianga Hospitality Management Operation System streamlines campus hospitality
+            services — bookings, facilities, catering, and student-centered experiences, all in one
+            place.
           </p>
-          <div class="social-inline">
-            <a href="#" aria-label="Twitter" title="Twitter">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0012 7.5v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
-                  fill="currentColor"
-                />
-              </svg>
-            </a>
-            <a href="#" aria-label="Facebook" title="Facebook">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M22 12a10 10 0 10-11.5 9.87v-6.99H8.9v-2.88h1.6V9.4c0-1.58.94-2.45 2.38-2.45.69 0 1.41.12 1.41.12v1.55h-.79c-.78 0-1.02.49-1.02.99v1.2h1.74l-.28 2.88h-1.46v6.99A10 10 0 0022 12z"
-                  fill="currentColor"
-                />
-              </svg>
-            </a>
-          </div>
         </div>
       </div>
 
       <div class="footer-columns">
         <div class="footer-section">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><RouterLink to="/">Home</RouterLink></li>
-            <li>
-              <a href="https://nemsu-hotel.netlify.app/" target="_blank" rel="noopener noreferrer"
-                >Book Rooms</a
-              >
-            </li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-section">
-          <h3>Services</h3>
-          <ul>
-            <li><a href="#">Food Order</a></li>
-            <li><a href="#">Room Reservation</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-section">
           <h3>Contact Info</h3>
           <ul>
-            <li><a href="tel:+639123456789">+63 9123 456 789</a></li>
-            <li><a href="mailto:info@nemsu.edu.ph">info@nemsu.edu.ph</a></li>
-            <li>Lianga, Surigao del Sur, Philippines</li>
+            <li>
+              <a href="tel:+639123456789">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"
+                    fill="currentColor"
+                  />
+                </svg>
+                +63 9123 456 789
+              </a>
+            </li>
+            <li>
+              <a href="mailto:info@nemsu.edu.ph">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                  <path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="2" fill="none" />
+                </svg>
+                info@nemsu.edu.ph
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/bshmliangadbest"
+                aria-label="Facebook"
+                title="Facebook"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22 12a10 10 0 10-11.5 9.87v-6.99H8.9v-2.88h1.6V9.4c0-1.58.94-2.45 2.38-2.45.69 0 1.41.12 1.41.12v1.55h-.79c-.78 0-1.02.49-1.02.99v1.2h1.74l-.28 2.88h-1.46v6.99A10 10 0 0022 12z"
+                    fill="currentColor"
+                  />
+                </svg>
+                Facebook Page
+              </a>
+            </li>
+            <li class="location-item">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1118 0z" fill="currentColor" />
+                <circle cx="12" cy="10" r="3" fill="#3e4182" />
+              </svg>
+              Lianga, Surigao del Sur, Philippines
+            </li>
           </ul>
         </div>
       </div>

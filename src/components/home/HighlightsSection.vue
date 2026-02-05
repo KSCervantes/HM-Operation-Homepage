@@ -3,6 +3,7 @@
     <!-- ==================== GALLERY SECTION ==================== -->
     <div class="gallery">
       <header class="section-header">
+        <span class="section-badge">✨ Our Gallery</span>
         <h2>Experience Excellence</h2>
         <p>Take a peek at our comfortable rooms and mouthwatering cuisine.</p>
       </header>
@@ -50,7 +51,6 @@
             </div>
           </div>
         </div>
-        <a href="https://nemsu-hotel.netlify.app/" class="btn-link">View All Rooms →</a>
       </div>
 
       <!-- Foods Carousel -->
@@ -98,58 +98,6 @@
             <div class="slide"><img src="/img/hero-2.webp" alt="Salads" /><span>Salads</span></div>
           </div>
         </div>
-        <a href="https://nemsu-hm-hostel.vercel.app/" class="btn-link btn-link-food"
-          >View Full Menu →</a
-        >
-      </div>
-    </div>
-
-    <!-- ==================== SERVICES SECTION ==================== -->
-    <div class="services">
-      <header class="section-header">
-        <span class="badge"> Our Services</span>
-        <h2>Find Your Path</h2>
-        <p>Select services crafted for campus hospitality excellence.</p>
-      </header>
-
-      <div class="service-cards">
-        <!-- Food Service Card -->
-        <article class="service-card">
-          <div class="card-top">
-            <span class="card-icon">
-              <img src="/img/menu.webp" alt="Menu" class="icon-img" />
-            </span>
-            <span class="card-tag tag-popular">Popular</span>
-          </div>
-          <h3>Hostel Food Menu</h3>
-          <p>
-            Delicious meals and catering options crafted for memorable campus dining experiences.
-          </p>
-          <ul class="features">
-            <li>🍳 Fresh Daily</li>
-            <li>🥗 Healthy</li>
-            <li>🎂 Catering</li>
-          </ul>
-          <a href="https://nemsu-hm-hostel.vercel.app/" class="btn btn-primary">Explore Foods →</a>
-        </article>
-
-        <!-- Hotel Service Card -->
-        <article class="service-card">
-          <div class="card-top">
-            <span class="card-icon">
-              <img src="/img/booking.webp" alt="Booking" class="icon-img" />
-            </span>
-            <span class="card-tag tag-new">New</span>
-          </div>
-          <h3>NEMSU University Hotel</h3>
-          <p>Instant scheduling with intelligent booking and seamless reservation workflows.</p>
-          <ul class="features">
-            <li>🛏️ Rooms</li>
-            <li>📅 Booking</li>
-            <li>🌟 24/7</li>
-          </ul>
-          <a href="https://nemsu-hotel.netlify.app/" class="btn btn-secondary">Book Now →</a>
-        </article>
       </div>
     </div>
   </section>
@@ -162,32 +110,143 @@
 
 /* ---------- Base Layout ---------- */
 .highlights {
-  padding: 80px 24px;
+  padding: 32px 12px;
   max-width: 1400px;
   margin: 0 auto;
+  position: relative;
+}
+
+@media (min-width: 480px) {
+  .highlights {
+    padding: 40px 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .highlights {
+    padding: 60px 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .highlights {
+    padding: 80px 24px;
+  }
+}
+
+.highlights::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 600px;
+  background: linear-gradient(180deg, rgba(62, 65, 130, 0.03) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: -1;
 }
 
 /* ---------- Section Headers ---------- */
 .section-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 28px;
+  padding: 0 8px;
+}
+
+@media (min-width: 480px) {
+  .section-header {
+    margin-bottom: 36px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-header {
+    margin-bottom: 50px;
+    padding: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-header {
+    margin-bottom: 60px;
+  }
+}
+
+.section-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #3e4182;
+  background: linear-gradient(135deg, rgba(62, 65, 130, 0.1) 0%, rgba(255, 204, 24, 0.15) 100%);
+  border: 2px solid rgba(62, 65, 130, 0.2);
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+@media (min-width: 480px) {
+  .section-badge {
+    padding: 10px 20px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-badge {
+    padding: 12px 24px;
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
 }
 
 .section-header h2 {
-  font-size: clamp(40px, 7vw, 64px);
+  font-size: clamp(28px, 7vw, 64px);
   font-weight: 800;
   color: #1a1a2e;
-  margin: 20px 0 16px;
+  margin: 12px 0 12px;
   letter-spacing: -0.5px;
   line-height: 1.2;
+  background: linear-gradient(135deg, #1a1a2e 0%, #3e4182 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@media (min-width: 480px) {
+  .section-header h2 {
+    margin: 16px 0 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-header h2 {
+    margin: 20px 0 16px;
+  }
 }
 
 .section-header p {
-  font-size: clamp(18px, 2.5vw, 24px);
+  font-size: clamp(15px, 4vw, 24px);
   color: #374151;
   max-width: 600px;
   margin: 0 auto;
-  line-height: 1.7;
+  line-height: 1.6;
+}
+
+@media (min-width: 480px) {
+  .section-header p {
+    font-size: clamp(16px, 3vw, 24px);
+    line-height: 1.7;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-header p {
+    font-size: clamp(18px, 2.5vw, 24px);
+  }
 }
 
 /* ---------- Badges ---------- */
@@ -215,39 +274,148 @@
    ========================================================================== */
 
 .gallery {
-  padding-bottom: 80px;
-  margin-bottom: 60px;
-  border-bottom: 3px solid #e5e7eb;
+  padding-bottom: 32px;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 480px) {
+  .gallery {
+    padding-bottom: 40px;
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: 768px) {
+  .gallery {
+    padding-bottom: 60px;
+    margin-bottom: 40px;
+  }
 }
 
 .carousel-section {
-  margin-bottom: 70px;
+  margin-bottom: 24px;
+  padding: 12px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.95) 100%);
+  border-radius: 16px;
+  border: 1px solid rgba(62, 65, 130, 0.08);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+}
+
+@media (min-width: 480px) {
+  .carousel-section {
+    margin-bottom: 32px;
+    padding: 16px;
+    border-radius: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel-section {
+    margin-bottom: 48px;
+    padding: 20px;
+    border-radius: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel-section {
+    margin-bottom: 60px;
+    padding: 24px;
+    border-radius: 32px;
+  }
 }
 
 /* ---------- Carousel Title ---------- */
 .carousel-title {
   display: flex;
   align-items: center;
-  gap: 16px;
-  font-size: clamp(24px, 4vw, 32px);
+  gap: 10px;
+  font-size: clamp(18px, 5vw, 32px);
   font-weight: 800;
   color: #1a1a2e;
-  margin-bottom: 28px;
-  padding: 0 24px;
+  margin-bottom: 16px;
+  padding: 0 4px;
+}
+
+@media (min-width: 480px) {
+  .carousel-title {
+    gap: 12px;
+    margin-bottom: 20px;
+    padding: 0 8px;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel-title {
+    gap: 14px;
+    margin-bottom: 24px;
+    padding: 0 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel-title {
+    gap: 16px;
+    margin-bottom: 28px;
+    padding: 0 24px;
+  }
 }
 
 .title-icon {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 30px;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-  padding: 10px;
+  font-size: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(62, 65, 130, 0.12);
+  padding: 6px;
   overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  border: 2px solid rgba(62, 65, 130, 0.1);
+}
+
+@media (min-width: 480px) {
+  .title-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 14px;
+    padding: 8px;
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .title-icon {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    border-radius: 16px;
+    padding: 10px;
+    font-size: 28px;
+    box-shadow: 0 8px 24px rgba(62, 65, 130, 0.15);
+  }
+}
+
+@media (min-width: 1024px) {
+  .title-icon {
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+    border-radius: 18px;
+    font-size: 30px;
+  }
+}
+
+.carousel-section:hover .title-icon {
+  transform: scale(1.08) rotate(-3deg);
+  box-shadow: 0 12px 32px rgba(62, 65, 130, 0.25);
 }
 
 .title-icon-img {
@@ -257,8 +425,9 @@
 }
 
 .icon-food {
-  background: #fff;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(255, 204, 24, 0.2);
+  border-color: rgba(255, 204, 24, 0.3);
 }
 
 /* ---------- Carousel Container ---------- */
@@ -309,22 +478,47 @@
 /* ---------- Slides (Larger for visibility) ---------- */
 .slide {
   position: relative;
-  width: 300px;
-  height: 220px;
-  border-radius: 20px;
+  width: 220px;
+  height: 160px;
+  border-radius: 16px;
   overflow: hidden;
   flex-shrink: 0;
   cursor: pointer;
-  transition:
-    transform 0.3s,
-    box-shadow 0.3s;
-  border: 3px solid transparent;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+}
+
+.slide::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(62, 65, 130, 0.1) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.slide:hover::before {
+  opacity: 1;
+}
+
+@media (min-width: 480px) {
+  .slide {
+    width: 260px;
+    height: 190px;
+    border-radius: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.8);
+  }
 }
 
 @media (min-width: 768px) {
   .slide {
-    width: 360px;
-    height: 260px;
+    width: 320px;
+    height: 230px;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
   }
 }
 
@@ -348,30 +542,67 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 16px 20px;
-  font-size: 18px;
+  padding: 12px 14px;
+  font-size: 14px;
   font-weight: 700;
+}
+
+@media (min-width: 480px) {
+  .slide span {
+    padding: 16px 18px;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .slide span {
+    padding: 18px 22px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .slide span {
+    padding: 20px 24px;
+    font-size: 17px;
+  }
+}
+
+.slide span {
   color: #fff;
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.85) 0%,
-    rgba(0, 0, 0, 0.4) 70%,
+    rgba(26, 26, 46, 0.95) 0%,
+    rgba(26, 26, 46, 0.6) 50%,
     transparent 100%
   );
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.5px;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.slide:hover span {
+  padding-bottom: 28px;
+  background: linear-gradient(
+    to top,
+    rgba(62, 65, 130, 0.95) 0%,
+    rgba(62, 65, 130, 0.6) 50%,
+    transparent 100%
+  );
 }
 
 .slide:hover,
 .slide:focus {
-  transform: scale(1.05);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+  transform: scale(1.06) translateY(-8px);
+  box-shadow: 0 24px 48px rgba(62, 65, 130, 0.25);
   border-color: #ffcc18;
   z-index: 10;
 }
 
 .slide:hover img,
 .slide:focus img {
-  transform: scale(1.08);
+  transform: scale(1.12);
 }
 
 /* ---------- Carousel Link Button (Larger touch target) ---------- */
@@ -424,195 +655,12 @@
 }
 
 /* ==========================================================================
-   SERVICES SECTION
-   ========================================================================== */
-
-.services {
-  padding-top: 20px;
-}
-
-.service-cards {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 32px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-@media (min-width: 768px) {
-  .service-cards {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-  }
-}
-
-/* ---------- Service Card (Larger & Clearer) ---------- */
-.service-card {
-  background: #fff;
-  border-radius: 28px;
-  padding: 40px 36px;
-  border: 3px solid #e5e7eb;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
-  transition:
-    transform 0.3s,
-    box-shadow 0.3s,
-    border-color 0.3s;
-}
-
-.service-card:hover,
-.service-card:focus-within {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 50px rgba(62, 65, 130, 0.15);
-  border-color: #3e4182;
-}
-
-.card-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 24px;
-}
-
-.card-icon {
-  width: 80px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 40px;
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  padding: 12px;
-  overflow: hidden;
-}
-
-.icon-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.card-tag {
-  padding: 10px 18px;
-  font-size: 13px;
-  font-weight: 800;
-  text-transform: uppercase;
-  border-radius: 25px;
-  letter-spacing: 0.5px;
-}
-
-.tag-popular {
-  background: linear-gradient(135deg, #ffcc18, #ffa500);
-  color: #1a1a1a;
-  box-shadow: 0 3px 0 rgba(255, 165, 0, 0.4);
-}
-
-.tag-new {
-  background: linear-gradient(135deg, #10b981, #059669);
-  color: #fff;
-  box-shadow: 0 3px 0 rgba(5, 150, 105, 0.4);
-}
-
-.service-card h3 {
-  font-size: clamp(24px, 4vw, 28px);
-  font-weight: 800;
-  color: #1a1a2e;
-  margin-bottom: 16px;
-  line-height: 1.3;
-}
-
-.service-card p {
-  font-size: 18px;
-  color: #4b5563;
-  line-height: 1.75;
-  margin-bottom: 24px;
-}
-
-/* ---------- Features List (Larger & Clearer) ---------- */
-.features {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  list-style: none;
-  padding: 0;
-  margin: 0 0 28px;
-}
-
-.features li {
-  padding: 12px 20px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #374151;
-  background: #f3f4f6;
-  border-radius: 25px;
-  border: 2px solid #e5e7eb;
-}
-
-/* ---------- Buttons (Large Touch Targets) ---------- */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 36px;
-  font-size: 18px;
-  font-weight: 700;
-  text-decoration: none;
-  border-radius: 16px;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  transition:
-    transform 0.2s,
-    box-shadow 0.2s;
-  min-height: 64px;
-  min-width: 200px;
-}
-
-.btn-primary {
-  color: #fff;
-  background: linear-gradient(135deg, #3e4182, #5a5db8);
-  box-shadow: 0 6px 0 rgba(62, 65, 130, 0.4);
-}
-
-.btn-secondary {
-  color: #1a1a1a;
-  background: linear-gradient(135deg, #ffcc18, #ffa500);
-  box-shadow: 0 6px 0 rgba(255, 165, 0, 0.4);
-}
-
-.btn:hover,
-.btn:focus {
-  transform: translateY(-4px);
-}
-
-.btn-primary:hover,
-.btn-primary:focus {
-  box-shadow:
-    0 10px 0 rgba(62, 65, 130, 0.4),
-    0 12px 30px rgba(62, 65, 130, 0.25);
-}
-
-.btn-secondary:hover,
-.btn-secondary:focus {
-  box-shadow:
-    0 10px 0 rgba(255, 165, 0, 0.4),
-    0 12px 30px rgba(255, 165, 0, 0.25);
-}
-
-.btn:active {
-  transform: translateY(2px);
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
-}
-
-/* ==========================================================================
    ACCESSIBILITY & REDUCED MOTION
    ========================================================================== */
 
 /* High visibility focus states */
-.btn:focus-visible,
 .btn-link:focus-visible,
-.slide:focus-visible,
-.service-card:focus-within {
+.slide:focus-visible {
   outline: 4px solid #ffcc18;
   outline-offset: 4px;
 }
@@ -625,10 +673,8 @@
 /* Reduced motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
   .carousel-track,
-  .service-card,
   .slide,
   .slide img,
-  .btn,
   .btn-link {
     animation: none !important;
     transition: none !important;
@@ -642,15 +688,6 @@
 
 /* High contrast mode support */
 @media (prefers-contrast: high) {
-  .service-card {
-    border-width: 4px;
-    border-color: #000;
-  }
-
-  .btn {
-    border: 3px solid currentColor;
-  }
-
   .slide {
     border: 4px solid #000;
   }
