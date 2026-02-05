@@ -85,7 +85,7 @@ const closeNav = () => (navOpen.value = false)
         <div class="brand-meta">
           <p class="brand-description">
             NEMSU-Lianga Hospitality Management Operation System streamlines campus hospitality
-            services — bookings, facilities, catering, and student-centered experiences, all in one
+            services — bookings, Dormitory, catering, and student-centered experiences, all in one
             place.
           </p>
         </div>

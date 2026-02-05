@@ -138,7 +138,7 @@
 
 /* Specific hover colors for Book Rooms and Order Foods */
 a[href*="nemsu-hotel"].btn-primary-3d:hover,
-a[href*="nemsu-foods"].btn-primary-3d:hover {
+a[href*="nemsu-hm-hostel"].btn-primary-3d:hover {
   background: linear-gradient(135deg, #fde047 0%, #facc15 100%);
   box-shadow: 0 12px 0 #eab308, 0 20px 30px rgba(234, 179, 8, 0.4);
   text-decoration: none;

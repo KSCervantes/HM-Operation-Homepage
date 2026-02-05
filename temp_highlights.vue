@@ -52,22 +52,22 @@
           <div class="gallery-item gallery-item-large">
             <img
               src="/img/hero-2.webp"
-              alt="Deluxe suite with comfortable bedding and modern amenities"
+              alt="Suite Room with comfortable bedding and modern amenities"
               loading="lazy"
             />
             <div class="gallery-overlay">
-              <span class="gallery-label">Deluxe Suite</span>
+              <span class="gallery-label">Suite Room</span>
               <span class="gallery-desc">Spacious comfort for relaxation</span>
             </div>
           </div>
           <div class="gallery-item">
             <img
               src="/img/hero-1.webp"
-              alt="Standard room with twin beds perfect for students"
+              alt="Triple Room with twin beds perfect for students"
               loading="lazy"
             />
             <div class="gallery-overlay">
-              <span class="gallery-label">Standard Room</span>
+              <span class="gallery-label">Triple Room</span>
             </div>
           </div>
           <div class="gallery-item">
@@ -77,19 +77,19 @@
               loading="lazy"
             />
             <div class="gallery-overlay">
-              <span class="gallery-label">Conference Hall</span>
+              <span class="gallery-label">Twin Room</span>
             </div>
           </div>
           <div class="gallery-item">
             <img src="/img/hero-1.webp" alt="Cozy lounge area for guests" loading="lazy" />
             <div class="gallery-overlay">
-              <span class="gallery-label">Guest Lounge</span>
+              <span class="gallery-label">Double Room</span>
             </div>
           </div>
           <div class="gallery-item">
-            <img src="/img/hero-1.webp" alt="Modern bathroom facilities" loading="lazy" />
+            <img src="/img/hero-1.webp" alt="Modern bathroom Dorm Room" loading="lazy" />
             <div class="gallery-overlay">
-              <span class="gallery-label">Modern Facilities</span>
+              <span class="gallery-label">Modern Dorm Room</span>
             </div>
           </div>
         </div>

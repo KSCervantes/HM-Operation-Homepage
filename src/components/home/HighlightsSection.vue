@@ -19,35 +19,35 @@
         <div class="carousel">
           <div class="carousel-track scroll-left">
             <div class="slide">
-              <img src="/img/hero-1.webp" alt="Deluxe Suite" /><span>Deluxe Suite</span>
+              <img src="/img/Suite Room.webp" alt="Suite Room" /><span>Suite Room</span>
             </div>
             <div class="slide">
-              <img src="/img/hero-2.webp" alt="Standard Room" /><span>Standard Room</span>
+              <img src="/img/Triple Room.webp" alt="Triple Room" /><span>Triple Room</span>
             </div>
             <div class="slide">
-              <img src="/img/hero-1.webp" alt="Conference Hall" /><span>Conference Hall</span>
+              <img src="/img/Twin Room.webp" alt="Twin Room" /><span>Twin Room</span>
             </div>
             <div class="slide">
-              <img src="/img/hero-2.webp" alt="Guest Lounge" /><span>Guest Lounge</span>
+              <img src="/img/Double Room.webp" alt="Double Room" /><span>Double Room</span>
             </div>
             <div class="slide">
-              <img src="/img/hero-1.webp" alt="Facilities" /><span>Facilities</span>
+              <img src="/img/Dorm Room.webp" alt="Dorm Room" /><span>Dorm Room</span>
             </div>
             <!-- Duplicates for seamless loop -->
             <div class="slide">
-              <img src="/img/hero-1.webp" alt="Deluxe Suite" /><span>Deluxe Suite</span>
+              <img src="/img/Suite Room.webp" alt="Suite Room" /><span>Suite Room</span>
             </div>
             <div class="slide">
-              <img src="/img/hero-2.webp" alt="Standard Room" /><span>Standard Room</span>
+              <img src="/img/Triple Room.webp" alt="Triple Room" /><span>Triple Room</span>
             </div>
             <div class="slide">
-              <img src="/img/hero-1.webp" alt="Conference Hall" /><span>Conference Hall</span>
+              <img src="/img/Twin Room.webp" alt="Twin Room" /><span>Twin Room</span>
             </div>
             <div class="slide">
-              <img src="/img/hero-2.webp" alt="Guest Lounge" /><span>Guest Lounge</span>
+              <img src="/img/Double Room.webp" alt="Double Room" /><span>Double Room</span>
             </div>
             <div class="slide">
-              <img src="/img/hero-1.webp" alt="Facilities" /><span>Facilities</span>
+              <img src="/img/Dorm Room.webp" alt="Dorm Room" /><span>Dorm Room</span>
             </div>
           </div>
         </div>
@@ -64,38 +64,22 @@
         <div class="carousel">
           <div class="carousel-track scroll-right">
             <div class="slide">
-              <img src="/img/menu.webp" alt="Filipino Breakfast" /><span>Filipino Breakfast</span>
+              <img src="/img/Main.webp" alt="Main Dishes" /><span>Main Dishes</span>
             </div>
+            <div class="slide"><img src="/img/Snacks.webp" alt="Snacks" /><span>Snacks</span></div>
+            <div class="slide"><img src="/img/Drinks.webp" alt="Drinks" /><span>Drinks</span></div>
             <div class="slide">
-              <img src="/img/hero-2.webp" alt="Seafood Grill" /><span>Seafood Grill</span>
+              <img src="/img/Desserts.webp" alt="Desserts" /><span>Desserts</span>
             </div>
-            <div class="slide">
-              <img src="/img/hero-1.webp" alt="Meat Dishes" /><span>Meat Dishes</span>
-            </div>
-            <div class="slide">
-              <img src="/img/hero-2.webp" alt="Beverages" /><span>Beverages</span>
-            </div>
-            <div class="slide">
-              <img src="/img/hero-1.webp" alt="Desserts" /><span>Desserts</span>
-            </div>
-            <div class="slide"><img src="/img/hero-2.webp" alt="Salads" /><span>Salads</span></div>
             <!-- Duplicates for seamless loop -->
             <div class="slide">
-              <img src="/img/menu.webp" alt="Filipino Breakfast" /><span>Filipino Breakfast</span>
+              <img src="/img/Main.webp" alt="Main Dishes" /><span>Main Dishes</span>
             </div>
+            <div class="slide"><img src="/img/Snacks.webp" alt="Snacks" /><span>Snacks</span></div>
+            <div class="slide"><img src="/img/Drinks.webp" alt="Drinks" /><span>Drinks</span></div>
             <div class="slide">
-              <img src="/img/hero-2.webp" alt="Seafood Grill" /><span>Seafood Grill</span>
+              <img src="/img/Desserts.webp" alt="Desserts" /><span>Desserts</span>
             </div>
-            <div class="slide">
-              <img src="/img/hero-1.webp" alt="Meat Dishes" /><span>Meat Dishes</span>
-            </div>
-            <div class="slide">
-              <img src="/img/hero-2.webp" alt="Beverages" /><span>Beverages</span>
-            </div>
-            <div class="slide">
-              <img src="/img/hero-1.webp" alt="Desserts" /><span>Desserts</span>
-            </div>
-            <div class="slide"><img src="/img/hero-2.webp" alt="Salads" /><span>Salads</span></div>
           </div>
         </div>
       </div>

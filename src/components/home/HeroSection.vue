@@ -18,7 +18,7 @@
       </div>
       <div class="hero-visual">
         <div class="image-stack">
-          <img src="/img/hero-1.webp" alt="Hospitality facilities" class="hero-img hero-img-1" />
+          <img src="/img/hero-1.webp" alt="Hospitality Dorm Room" class="hero-img hero-img-1" />
           <img src="/img/hero-2.webp" alt="Campus services" class="hero-img hero-img-2" />
         </div>
       </div>
