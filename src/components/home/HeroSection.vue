@@ -3,7 +3,10 @@
     <div class="hero-bg" aria-hidden="true"></div>
     <div class="hero-content">
       <div class="hero-text">
-        <p class="built-local">🇵🇭 Created by Filipinos, Support Local!</p>
+        <p class="built-local">
+          <img src="@/assets/world-flag.png" alt="Philippines flag" class="flag-icon" />
+          Created by Filipinos, Support Local!
+        </p>
         <h1>
           <span class="word word-1">Delicious.</span>
           <span class="word word-2">Affordable.</span>
@@ -169,6 +172,12 @@
   transition: all 300ms ease;
   animation: slideInDown 0.6s ease-out 0.2s backwards;
 }
+.hero-text .built-local .flag-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
 @media (min-width: 480px) {
   .hero-text .built-local {
     font-size: 14px;
@@ -176,12 +185,20 @@
     gap: 10px;
     margin-bottom: 20px;
   }
+  .hero-text .built-local .flag-icon {
+    width: 20px;
+    height: 20px;
+  }
 }
 @media (min-width: 768px) {
   .hero-text .built-local {
     font-size: 16px;
     padding: 10px 20px;
     margin-bottom: 24px;
+  }
+  .hero-text .built-local .flag-icon {
+    width: 22px;
+    height: 22px;
   }
 }
 .hero-text .built-local:hover {

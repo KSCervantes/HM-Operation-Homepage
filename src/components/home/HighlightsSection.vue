@@ -3,51 +3,48 @@
     <!-- ==================== GALLERY SECTION ==================== -->
     <div class="gallery">
       <header class="section-header">
-        <span class="section-badge">✨ Our Gallery</span>
+        <span class="section-badge">Our Gallery</span>
         <h2>Experience Excellence</h2>
         <p>Take a peek at our comfortable rooms and mouthwatering cuisine.</p>
       </header>
 
       <!-- Rooms Carousel -->
       <div class="carousel-section">
-        <h3 class="carousel-title">
-          <span class="title-icon">
-            <img src="/img/booking.webp" alt="Rooms" class="title-icon-img" />
-          </span>
-          Comfortable Rooms
-        </h3>
-        <div class="carousel">
-          <div class="carousel-track scroll-left">
-            <div class="slide">
-              <img src="/img/Suite Room.webp" alt="Suite Room" /><span>Suite Room</span>
-            </div>
-            <div class="slide">
-              <img src="/img/Triple Room.webp" alt="Triple Room" /><span>Triple Room</span>
-            </div>
-            <div class="slide">
-              <img src="/img/Twin Room.webp" alt="Twin Room" /><span>Twin Room</span>
-            </div>
-            <div class="slide">
-              <img src="/img/Double Room.webp" alt="Double Room" /><span>Double Room</span>
-            </div>
-            <div class="slide">
-              <img src="/img/Dorm Room.webp" alt="Dorm Room" /><span>Dorm Room</span>
-            </div>
-            <!-- Duplicates for seamless loop -->
-            <div class="slide">
-              <img src="/img/Suite Room.webp" alt="Suite Room" /><span>Suite Room</span>
-            </div>
-            <div class="slide">
-              <img src="/img/Triple Room.webp" alt="Triple Room" /><span>Triple Room</span>
-            </div>
-            <div class="slide">
-              <img src="/img/Twin Room.webp" alt="Twin Room" /><span>Twin Room</span>
-            </div>
-            <div class="slide">
-              <img src="/img/Double Room.webp" alt="Double Room" /><span>Double Room</span>
-            </div>
-            <div class="slide">
-              <img src="/img/Dorm Room.webp" alt="Dorm Room" /><span>Dorm Room</span>
+        <div class="carousel-header">
+          <h3 class="carousel-title">
+            <span class="title-icon">
+              <img src="/img/booking.webp" alt="Rooms" class="title-icon-img" />
+            </span>
+            Comfortable Rooms
+          </h3>
+        </div>
+        <div class="carousel" ref="roomsCarousel">
+          <div
+            class="carousel-track scroll-left"
+            @mouseenter="pauseRooms"
+            @mouseleave="resumeRooms"
+          >
+            <div
+              v-for="(room, index) in rooms"
+              :key="`room-${index}`"
+              class="slide"
+              @click="openLightbox(room)"
+              tabindex="0"
+              @keydown.enter="openLightbox(room)"
+              @keydown.space.prevent="openLightbox(room)"
+            >
+              <img :src="room.src" :alt="room.alt" loading="lazy" />
+              <div class="slide-overlay">
+                <span class="slide-label">{{ room.label }}</span>
+                <span class="slide-desc">{{ room.desc }}</span>
+              </div>
+              <div class="slide-hover-indicator">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M21 21l-4.35-4.35L21 21zM19 13h2v2h-2v-2zM13 19h2v2h-2v-2zM5 19h2v2H5v-2zM3 13h2v2H3v-2zM13 3h2v2h-2V3zM5 3h2v2H5V3zM3 7h18v2H3V7z"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
@@ -55,37 +52,204 @@
 
       <!-- Foods Carousel -->
       <div class="carousel-section">
-        <h3 class="carousel-title">
-          <span class="title-icon icon-food">
-            <img src="/img/menu.webp" alt="Menu" class="title-icon-img" />
-          </span>
-          Delicious Foods
-        </h3>
-        <div class="carousel">
-          <div class="carousel-track scroll-right">
-            <div class="slide">
-              <img src="/img/Main.webp" alt="Main Dishes" /><span>Main Dishes</span>
+        <div class="carousel-header">
+          <h3 class="carousel-title">
+            <span class="title-icon icon-food">
+              <img src="/img/menu.webp" alt="Menu" class="title-icon-img" />
+            </span>
+            Delicious Foods
+          </h3>
+        </div>
+        <div class="carousel" ref="foodsCarousel">
+          <div
+            class="carousel-track scroll-right"
+            @mouseenter="pauseFoods"
+            @mouseleave="resumeFoods"
+          >
+            <div
+              v-for="(food, index) in foods"
+              :key="`food-${index}`"
+              class="slide"
+              @click="openLightbox(food)"
+              tabindex="0"
+              @keydown.enter="openLightbox(food)"
+              @keydown.space.prevent="openLightbox(food)"
+            >
+              <img :src="food.src" :alt="food.alt" loading="lazy" />
+              <div class="slide-overlay">
+                <span class="slide-label">{{ food.label }}</span>
+                <span class="slide-desc">{{ food.desc }}</span>
+              </div>
+              <div class="slide-hover-indicator">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M21 21l-4.35-4.35L21 21zM19 13h2v2h-2v-2zM13 19h2v2h-2v-2zM5 19h2v2H5v-2zM3 13h2v2H3v-2zM13 3h2v2h-2V3zM5 3h2v2H5V3zM3 7h18v2H3V7z"
+                  />
+                </svg>
+              </div>
             </div>
-            <div class="slide"><img src="/img/Snacks.webp" alt="Snacks" /><span>Snacks</span></div>
-            <div class="slide"><img src="/img/Drinks.webp" alt="Drinks" /><span>Drinks</span></div>
-            <div class="slide">
-              <img src="/img/Desserts.webp" alt="Desserts" /><span>Desserts</span>
-            </div>
-            <!-- Duplicates for seamless loop -->
-            <div class="slide">
-              <img src="/img/Main.webp" alt="Main Dishes" /><span>Main Dishes</span>
-            </div>
-            <div class="slide"><img src="/img/Snacks.webp" alt="Snacks" /><span>Snacks</span></div>
-            <div class="slide"><img src="/img/Drinks.webp" alt="Drinks" /><span>Drinks</span></div>
-            <div class="slide">
-              <img src="/img/Desserts.webp" alt="Desserts" /><span>Desserts</span>
-            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lightbox Modal -->
+      <div
+        v-if="lightboxOpen"
+        class="lightbox"
+        @click="closeLightbox"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="lightbox-title"
+      >
+        <div class="lightbox-content" @click.stop>
+          <button class="lightbox-close" @click="closeLightbox" aria-label="Close lightbox">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+              />
+            </svg>
+          </button>
+          <img :src="currentImage.src" :alt="currentImage.alt" class="lightbox-image" />
+          <div class="lightbox-info">
+            <h3 id="lightbox-title" class="lightbox-title">{{ currentImage.label }}</h3>
+            <p class="lightbox-desc">{{ currentImage.desc }}</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import { ref, onMounted, onUnmounted } from 'vue'
+
+// Reactive data
+const lightboxOpen = ref(false)
+const currentImage = ref({ src: '', alt: '', label: '', desc: '' })
+
+// Carousel refs
+const roomsCarousel = ref<HTMLElement>()
+const foodsCarousel = ref<HTMLElement>()
+
+// Room data
+const rooms = ref([
+  {
+    src: '/img/Suite Room.webp',
+    alt: 'Suite Room',
+    label: 'Suite Room',
+    desc: 'Spacious comfort for relaxation',
+  },
+  {
+    src: '/img/Triple Room.webp',
+    alt: 'Triple Room',
+    label: 'Triple Room',
+    desc: 'Perfect for families',
+  },
+  { src: '/img/Twin Room.webp', alt: 'Twin Room', label: 'Twin Room', desc: 'Ideal for couples' },
+  {
+    src: '/img/Double Room.webp',
+    alt: 'Double Room',
+    label: 'Double Room',
+    desc: 'Cozy accommodation',
+  },
+  {
+    src: '/img/Dorm Room.webp',
+    alt: 'Dorm Room',
+    label: 'Dorm Room',
+    desc: 'Budget-friendly option',
+  },
+  // Duplicates for seamless loop
+  {
+    src: '/img/Suite Room.webp',
+    alt: 'Suite Room',
+    label: 'Suite Room',
+    desc: 'Spacious comfort for relaxation',
+  },
+  {
+    src: '/img/Triple Room.webp',
+    alt: 'Triple Room',
+    label: 'Triple Room',
+    desc: 'Perfect for families',
+  },
+  { src: '/img/Twin Room.webp', alt: 'Twin Room', label: 'Twin Room', desc: 'Ideal for couples' },
+  {
+    src: '/img/Double Room.webp',
+    alt: 'Double Room',
+    label: 'Double Room',
+    desc: 'Cozy accommodation',
+  },
+  {
+    src: '/img/Dorm Room.webp',
+    alt: 'Dorm Room',
+    label: 'Dorm Room',
+    desc: 'Budget-friendly option',
+  },
+])
+
+// Food data
+const foods = ref([
+  { src: '/img/Main.webp', alt: 'Main Dishes', label: 'Main Dishes', desc: 'Hearty and delicious' },
+  { src: '/img/Snacks.webp', alt: 'Snacks', label: 'Snacks', desc: 'Perfect bite-sized treats' },
+  { src: '/img/Drinks.webp', alt: 'Drinks', label: 'Drinks', desc: 'Refreshing beverages' },
+  { src: '/img/Desserts.webp', alt: 'Desserts', label: 'Desserts', desc: 'Sweet endings' },
+  // Duplicates for seamless loop
+  { src: '/img/Main.webp', alt: 'Main Dishes', label: 'Main Dishes', desc: 'Hearty and delicious' },
+  { src: '/img/Snacks.webp', alt: 'Snacks', label: 'Snacks', desc: 'Perfect bite-sized treats' },
+  { src: '/img/Drinks.webp', alt: 'Drinks', label: 'Drinks', desc: 'Refreshing beverages' },
+  { src: '/img/Desserts.webp', alt: 'Desserts', label: 'Desserts', desc: 'Sweet endings' },
+])
+
+// Methods
+const pauseRooms = () => {
+  if (roomsCarousel.value) {
+    roomsCarousel.value.querySelector('.carousel-track')?.classList.add('paused')
+  }
+}
+
+const resumeRooms = () => {
+  if (roomsCarousel.value) {
+    roomsCarousel.value.querySelector('.carousel-track')?.classList.remove('paused')
+  }
+}
+
+const pauseFoods = () => {
+  if (foodsCarousel.value) {
+    foodsCarousel.value.querySelector('.carousel-track')?.classList.add('paused')
+  }
+}
+
+const resumeFoods = () => {
+  if (foodsCarousel.value) {
+    foodsCarousel.value.querySelector('.carousel-track')?.classList.remove('paused')
+  }
+}
+
+const openLightbox = (image: any) => {
+  currentImage.value = image
+  lightboxOpen.value = true
+  document.body.style.overflow = 'hidden'
+}
+
+const closeLightbox = () => {
+  lightboxOpen.value = false
+  document.body.style.overflow = ''
+}
+
+// Keyboard navigation
+const handleKeydown = (event: KeyboardEvent) => {
+  if (event.key === 'Escape' && lightboxOpen.value) {
+    closeLightbox()
+  }
+}
+
+onMounted(() => {
+  document.addEventListener('keydown', handleKeydown)
+})
+
+onUnmounted(() => {
+  document.removeEventListener('keydown', handleKeydown)
+})
+</script>
 
 <style scoped>
 /* ==========================================================================
@@ -309,6 +473,36 @@
   }
 }
 
+/* ---------- Carousel Header ---------- */
+.carousel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding: 0 4px;
+}
+
+@media (min-width: 480px) {
+  .carousel-header {
+    margin-bottom: 20px;
+    padding: 0 8px;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel-header {
+    margin-bottom: 24px;
+    padding: 0 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel-header {
+    margin-bottom: 28px;
+    padding: 0 24px;
+  }
+}
+
 /* ---------- Carousel Title ---------- */
 .carousel-title {
   display: flex;
@@ -317,31 +511,24 @@
   font-size: clamp(18px, 5vw, 32px);
   font-weight: 800;
   color: #1a1a2e;
-  margin-bottom: 16px;
-  padding: 0 4px;
+  margin: 0;
 }
 
 @media (min-width: 480px) {
   .carousel-title {
     gap: 12px;
-    margin-bottom: 20px;
-    padding: 0 8px;
   }
 }
 
 @media (min-width: 768px) {
   .carousel-title {
     gap: 14px;
-    margin-bottom: 24px;
-    padding: 0 16px;
   }
 }
 
 @media (min-width: 1024px) {
   .carousel-title {
     gap: 16px;
-    margin-bottom: 28px;
-    padding: 0 24px;
   }
 }
 
@@ -426,6 +613,7 @@
   display: flex;
   gap: 24px;
   width: max-content;
+  transition: animation-play-state 0.3s ease;
 }
 
 .scroll-left {
@@ -434,6 +622,10 @@
 
 .scroll-right {
   animation: scrollRight 45s linear infinite;
+}
+
+.paused {
+  animation-play-state: paused !important;
 }
 
 @keyframes scrollLeft {
@@ -452,11 +644,6 @@
   to {
     transform: translateX(0);
   }
-}
-
-.carousel:hover .carousel-track,
-.carousel:focus-within .carousel-track {
-  animation-play-state: paused;
 }
 
 /* ---------- Slides (Larger for visibility) ---------- */
@@ -520,60 +707,116 @@
   transition: transform 0.4s;
 }
 
-/* Always visible labels for better clarity */
-.slide span {
+/* Slide Overlay */
+.slide-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   padding: 12px 14px;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-@media (min-width: 480px) {
-  .slide span {
-    padding: 16px 18px;
-    font-size: 15px;
-  }
-}
-
-@media (min-width: 768px) {
-  .slide span {
-    padding: 18px 22px;
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .slide span {
-    padding: 20px 24px;
-    font-size: 17px;
-  }
-}
-
-.slide span {
-  color: #fff;
   background: linear-gradient(
     to top,
     rgba(26, 26, 46, 0.95) 0%,
     rgba(26, 26, 46, 0.6) 50%,
     transparent 100%
   );
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-  letter-spacing: 0.5px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
   z-index: 2;
-  transition: all 0.3s ease;
 }
 
-.slide:hover span {
-  padding-bottom: 28px;
-  background: linear-gradient(
-    to top,
-    rgba(62, 65, 130, 0.95) 0%,
-    rgba(62, 65, 130, 0.6) 50%,
-    transparent 100%
-  );
+.slide:hover .slide-overlay,
+.slide:focus .slide-overlay {
+  transform: translateY(0);
+}
+
+.slide-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.slide-desc {
+  display: block;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+}
+
+@media (min-width: 480px) {
+  .slide-overlay {
+    padding: 16px 18px;
+  }
+  .slide-label {
+    font-size: 15px;
+  }
+  .slide-desc {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 768px) {
+  .slide-overlay {
+    padding: 18px 22px;
+  }
+  .slide-label {
+    font-size: 16px;
+  }
+  .slide-desc {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .slide-overlay {
+    padding: 20px 24px;
+  }
+  .slide-label {
+    font-size: 17px;
+  }
+  .slide-desc {
+    font-size: 15px;
+  }
+}
+
+/* Hover Indicator */
+.slide-hover-indicator {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3e4182;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  z-index: 3;
+}
+
+.slide:hover .slide-hover-indicator,
+.slide:focus .slide-hover-indicator {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media (min-width: 480px) {
+  .slide-hover-indicator {
+    width: 36px;
+    height: 36px;
+    top: 14px;
+    right: 14px;
+  }
 }
 
 .slide:hover,
@@ -636,6 +879,140 @@
 .carousel-section {
   display: flex;
   flex-direction: column;
+}
+
+/* ==========================================================================
+   LIGHTBOX MODAL
+   ========================================================================== */
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus {
+  background: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.lightbox-image {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+  display: block;
+}
+
+.lightbox-info {
+  padding: 20px;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.lightbox-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin: 0 0 8px 0;
+  background: linear-gradient(135deg, #1a1a2e 0%, #3e4182 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.lightbox-desc {
+  font-size: 16px;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .lightbox-content {
+    max-width: 80vw;
+    max-height: 80vh;
+    border-radius: 20px;
+  }
+
+  .lightbox-close {
+    width: 44px;
+    height: 44px;
+    top: 20px;
+    right: 20px;
+  }
+
+  .lightbox-info {
+    padding: 24px;
+  }
+
+  .lightbox-title {
+    font-size: 28px;
+  }
+
+  .lightbox-desc {
+    font-size: 18px;
+  }
 }
 
 /* ==========================================================================
